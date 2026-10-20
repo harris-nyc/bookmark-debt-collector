@@ -1,0 +1,16 @@
+# Never commit personal bookmark data or generated personal outputs
+private/
+*.local.json
+.bdc-cache/
+state.json
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+.DS_Store

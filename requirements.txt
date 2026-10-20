@@ -1,0 +1,7 @@
+numpy>=1.24
+scikit-learn>=1.3
+requests>=2.31
+# card PNG: only if no Chrome/Chromium on PATH (then also: python -m playwright install --only-shell chromium)
+playwright>=1.40
+# optional, better themes (local CPU embeddings, ~130 MB model download on first run)
+fastembed>=0.3

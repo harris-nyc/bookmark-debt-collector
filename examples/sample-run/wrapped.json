@@ -1,0 +1,117 @@
+{
+ "handle": "demo_you",
+ "generated_at": "2026-10-18T12:00:00+00:00",
+ "total": 32,
+ "first": "2025-04-06T07:00:00+00:00",
+ "last": "2026-10-15T01:00:00+00:00",
+ "span_days": 556,
+ "self_bookmarks": 1,
+ "unique_authors": 9,
+ "top_authors": [
+  [
+   "demo_papers_pat",
+   5
+  ],
+  [
+   "demo_infra_nina",
+   4
+  ],
+  [
+   "demo_recsys_raj",
+   4
+  ]
+ ],
+ "categories": {
+  "Install/Try": 8,
+  "Read": 4,
+  "Learn": 5,
+  "Follow up": 3,
+  "Archive": 12
+ },
+ "open_actions": 20,
+ "fresh_pct": 41,
+ "by_status": {
+  "fresh": 13,
+  "aging": 3,
+  "broken": 6,
+  "stale": 10
+ },
+ "links_checked": 28,
+ "dead": 4,
+ "unverifiable": 0,
+ "themes": [
+  {
+   "name": "Open-source models & infra",
+   "size": 17,
+   "terms": [
+    "repo",
+    "model",
+    "ranking",
+    "benchmarks",
+    "clone",
+    "implementation"
+   ]
+  },
+  {
+   "name": "Founders & habits",
+   "size": 7,
+   "terms": [
+    "write",
+    "founders",
+    "run",
+    "ai",
+    "learn",
+    "single"
+   ]
+  },
+  {
+   "name": "Market news",
+   "size": 3,
+   "terms": [
+    "prices",
+    "gpu"
+   ]
+  },
+  {
+   "name": "Papers to read",
+   "size": 3,
+   "terms": [
+    "thread",
+    "paper",
+    "paper thread",
+    "read",
+    "tool",
+    "original"
+   ]
+  },
+  {
+   "name": "Long reads on agents",
+   "size": 2,
+   "terms": [
+    "long",
+    "read",
+    "tool",
+    "work",
+    "explained",
+    "guide"
+   ]
+  }
+ ],
+ "hidden_themes": 0,
+ "oldest": {
+  "author": "demo_papers_pat",
+  "date": "2025-04-06T07:00:00Z",
+  "age_days": 560,
+  "text": "If you only read one RL paper this year, make it this one. Thread with the key figures.",
+  "url": "https://x.com/demo_papers_pat/status/1900000000000245489"
+ },
+ "skills": [
+  "Quantization guide",
+  "How to run your first 10k",
+  "Learn to cook 5 dinners",
+  "7 tips for deep work",
+  "Agents guide"
+ ],
+ "learn_count": 5,
+ "cluster_method": "BAAI/bge-small-en-v1.5 embeddings (384d, local) -> k-means(k=5, cosine silhouette=0.130) -> c-TF-IDF labels"
+}

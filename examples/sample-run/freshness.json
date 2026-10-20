@@ -1,0 +1,679 @@
+{
+ "summary": {
+  "total": 32,
+  "by_status": {
+   "fresh": 13,
+   "aging": 3,
+   "broken": 6,
+   "stale": 10
+  },
+  "fresh_pct": 41,
+  "checked": 28,
+  "dead": 4,
+  "archived_repos": 3,
+  "dormant_repos": 0,
+  "unverifiable": 0,
+  "alive_pct_of_verifiable": 86,
+  "with_updates": 3
+ },
+ "results": [
+  {
+   "id": "1900000000000000000",
+   "url": "https://x.com/demo_infra_nina/status/1900000000000000000",
+   "category": "Install/Try",
+   "age_days": 3.5,
+   "half_life_days": 90,
+   "decay": 0.974,
+   "status": "fresh",
+   "issues": [],
+   "notes": [
+    "vllm-project/vllm: 1 new release(s) since you saved it (latest v0.32.0)"
+   ],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://github.com/vllm-project/vllm",
+     "final_url": null,
+     "http": 200,
+     "state": "alive"
+    },
+    {
+     "type": "github",
+     "archived": false,
+     "days_since_push": 0,
+     "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+     "latest_release": "v0.32.0",
+     "latest_release_at": "2026-10-18T06:50:48Z",
+     "pushed_at": "2026-10-18T14:39:39Z",
+     "releases_since_saved": 1,
+     "renamed_from": null,
+     "repo": "vllm-project/vllm",
+     "stars": 94059,
+     "state": "alive"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000007919",
+   "url": "https://x.com/demo_gpu_gus/status/1900000000000007919",
+   "category": "Install/Try",
+   "age_days": 5.2,
+   "half_life_days": 90,
+   "decay": 0.96,
+   "status": "fresh",
+   "issues": [],
+   "notes": [
+    "ggml-org/llama.cpp: 30 new release(s) since you saved it (latest b11719)"
+   ],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://github.com/ggml-org/llama.cpp",
+     "final_url": null,
+     "http": 200,
+     "state": "alive"
+    },
+    {
+     "type": "github",
+     "archived": false,
+     "days_since_push": 0,
+     "description": "LLM inference in C/C++",
+     "latest_release": "b11719",
+     "latest_release_at": "2026-10-18T11:11:37Z",
+     "pushed_at": "2026-10-18T12:38:04Z",
+     "releases_since_saved": 30,
+     "renamed_from": null,
+     "repo": "ggml-org/llama.cpp",
+     "stars": 131585,
+     "state": "alive"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000015838",
+   "url": "https://x.com/demo_papers_pat/status/1900000000000015838",
+   "category": "Read",
+   "age_days": 9.5,
+   "half_life_days": 60,
+   "decay": 0.896,
+   "status": "fresh",
+   "issues": [],
+   "notes": [],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://arxiv.org/abs/1706.03762",
+     "final_url": null,
+     "http": 200,
+     "state": "alive"
+    },
+    {
+     "type": "link",
+     "url": "https://jalammar.github.io/illustrated-transformer/",
+     "final_url": null,
+     "http": 200,
+     "state": "alive"
+    },
+    {
+     "type": "arxiv",
+     "arxiv": "1706.03762",
+     "latest_version": "v7",
+     "state": "alive",
+     "title": "Attention Is All You Need",
+     "updated": "2023-08-02T00:41:18Z"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000023757",
+   "url": "https://x.com/demo_recsys_raj/status/1900000000000023757",
+   "category": "Install/Try",
+   "age_days": 12.7,
+   "half_life_days": 90,
+   "decay": 0.907,
+   "status": "fresh",
+   "issues": [],
+   "notes": [],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://github.com/facebookresearch/faiss",
+     "final_url": null,
+     "http": 200,
+     "state": "alive"
+    },
+    {
+     "type": "github",
+     "archived": false,
+     "days_since_push": 2,
+     "description": "A library for efficient similarity search and clustering of dense vectors.",
+     "latest_release": "v1.15.1",
+     "latest_release_at": "2026-09-16T19:24:02Z",
+     "pushed_at": "2026-10-16T13:07:44Z",
+     "releases_since_saved": 0,
+     "renamed_from": null,
+     "repo": "facebookresearch/faiss",
+     "stars": 41164,
+     "state": "alive"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000031676",
+   "url": "https://x.com/demo_agents_ana/status/1900000000000031676",
+   "category": "Learn",
+   "age_days": 14.1,
+   "half_life_days": 365,
+   "decay": 0.974,
+   "status": "fresh",
+   "issues": [],
+   "notes": [],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+     "final_url": null,
+     "http": 200,
+     "state": "alive"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000039595",
+   "url": "https://x.com/demo_founder_fox/status/1900000000000039595",
+   "category": "Follow up",
+   "age_days": 16.8,
+   "half_life_days": 30,
+   "decay": 0.679,
+   "status": "fresh",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000047514",
+   "url": "https://x.com/demo_news_ned/status/1900000000000047514",
+   "category": "Archive",
+   "age_days": 20.5,
+   "half_life_days": 14,
+   "decay": 0.362,
+   "status": "aging",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000055433",
+   "url": "https://x.com/demo_you/status/1900000000000055433",
+   "category": "Archive",
+   "age_days": 22.7,
+   "half_life_days": 14,
+   "decay": 0.325,
+   "status": "aging",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000063352",
+   "url": "https://x.com/demo_recsys_raj/status/1900000000000063352",
+   "category": "Follow up",
+   "age_days": 25.2,
+   "half_life_days": 30,
+   "decay": 0.559,
+   "status": "fresh",
+   "issues": [],
+   "notes": [],
+   "checks": [
+    {
+     "type": "quoted_post",
+     "id": "1900000000000055433",
+     "state": "alive",
+     "x_status": "ok"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000071271",
+   "url": "https://x.com/demo_coach_kim/status/1900000000000071271",
+   "category": "Learn",
+   "age_days": 30.4,
+   "half_life_days": 365,
+   "decay": 0.944,
+   "status": "fresh",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000079190",
+   "url": "https://x.com/demo_papers_pat/status/1900000000000079190",
+   "category": "Read",
+   "age_days": 34.8,
+   "half_life_days": 60,
+   "decay": 0.669,
+   "status": "fresh",
+   "issues": [],
+   "notes": [],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://arxiv.org/abs/2211.17192",
+     "final_url": null,
+     "http": 200,
+     "state": "alive"
+    },
+    {
+     "type": "arxiv",
+     "arxiv": "2211.17192",
+     "latest_version": "v2",
+     "state": "alive",
+     "title": "Fast Inference from Transformers via Speculative Decoding",
+     "updated": "2023-05-18T20:28:20Z"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000087109",
+   "url": "https://x.com/demo_infra_nina/status/1900000000000087109",
+   "category": "Archive",
+   "age_days": 40.1,
+   "half_life_days": 90,
+   "decay": 0.734,
+   "status": "broken",
+   "issues": [
+    "dead link: https://github.com/demo-nonexistent-org-xyz/agent-thing",
+    "repo dead: demo-nonexistent-org-xyz/agent-thing"
+   ],
+   "notes": [],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://github.com/demo-nonexistent-org-xyz/agent-thing",
+     "final_url": null,
+     "http": 404,
+     "state": "dead"
+    },
+    {
+     "type": "github",
+     "note": "repo not found (deleted, renamed or private)",
+     "repo": "demo-nonexistent-org-xyz/agent-thing",
+     "state": "dead"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000095028",
+   "url": "https://x.com/demo_gpu_gus/status/1900000000000095028",
+   "category": "Archive",
+   "age_days": 46.0,
+   "half_life_days": 14,
+   "decay": 0.102,
+   "status": "stale",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000102947",
+   "url": "https://x.com/demo_agents_ana/status/1900000000000102947",
+   "category": "Read",
+   "age_days": 52.7,
+   "half_life_days": 60,
+   "decay": 0.544,
+   "status": "fresh",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000110866",
+   "url": "https://x.com/demo_founder_fox/status/1900000000000110866",
+   "category": "Archive",
+   "age_days": 60.8,
+   "half_life_days": 14,
+   "decay": 0.049,
+   "status": "stale",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000118785",
+   "url": "https://x.com/demo_news_ned/status/1900000000000118785",
+   "category": "Archive",
+   "age_days": 66.3,
+   "half_life_days": 14,
+   "decay": 0.038,
+   "status": "stale",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000126704",
+   "url": "https://x.com/demo_recsys_raj/status/1900000000000126704",
+   "category": "Install/Try",
+   "age_days": 75.8,
+   "half_life_days": 90,
+   "decay": 0.558,
+   "status": "fresh",
+   "issues": [],
+   "notes": [
+    "huggingface/transformers: 9 new release(s) since you saved it (latest v5.20.1)"
+   ],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://github.com/huggingface/transformers",
+     "final_url": null,
+     "http": 200,
+     "state": "alive"
+    },
+    {
+     "type": "github",
+     "archived": false,
+     "days_since_push": 0,
+     "description": "\ud83e\udd17 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+     "latest_release": "v5.20.1",
+     "latest_release_at": "2026-10-16T13:02:29Z",
+     "pushed_at": "2026-10-18T04:14:43Z",
+     "releases_since_saved": 9,
+     "renamed_from": null,
+     "repo": "huggingface/transformers",
+     "stars": 167814,
+     "state": "alive"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000134623",
+   "url": "https://x.com/demo_coach_kim/status/1900000000000134623",
+   "category": "Learn",
+   "age_days": 90.4,
+   "half_life_days": 365,
+   "decay": 0.842,
+   "status": "fresh",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000142542",
+   "url": "https://x.com/demo_papers_pat/status/1900000000000142542",
+   "category": "Install/Try",
+   "age_days": 110.8,
+   "half_life_days": 90,
+   "decay": 0.426,
+   "status": "broken",
+   "issues": [
+    "repo archived: google-research/bert"
+   ],
+   "notes": [],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://github.com/google-research/bert",
+     "final_url": null,
+     "http": 200,
+     "state": "alive"
+    },
+    {
+     "type": "github",
+     "archived": true,
+     "days_since_push": 817,
+     "description": "TensorFlow code and pre-trained models for BERT",
+     "pushed_at": "2024-07-23T23:39:41Z",
+     "renamed_from": null,
+     "repo": "google-research/bert",
+     "stars": 40036,
+     "state": "archived"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000150461",
+   "url": "https://x.com/demo_infra_nina/status/1900000000000150461",
+   "category": "Install/Try",
+   "age_days": 130.5,
+   "half_life_days": 90,
+   "decay": 0.366,
+   "status": "broken",
+   "issues": [
+    "repo archived: openai/gpt-2"
+   ],
+   "notes": [],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://github.com/openai/gpt-2",
+     "final_url": null,
+     "http": 200,
+     "state": "alive"
+    },
+    {
+     "type": "github",
+     "archived": true,
+     "days_since_push": 795,
+     "description": "Code for the paper \"Language Models are Unsupervised Multitask Learners\"",
+     "pushed_at": "2024-08-14T10:50:53Z",
+     "renamed_from": null,
+     "repo": "openai/gpt-2",
+     "stars": 25003,
+     "state": "archived"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000158380",
+   "url": "https://x.com/demo_founder_fox/status/1900000000000158380",
+   "category": "Archive",
+   "age_days": 150.6,
+   "half_life_days": 14,
+   "decay": 0.001,
+   "status": "stale",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000166299",
+   "url": "https://x.com/demo_agents_ana/status/1900000000000166299",
+   "category": "Archive",
+   "age_days": 170.7,
+   "half_life_days": 60,
+   "decay": 0.139,
+   "status": "broken",
+   "issues": [
+    "quoted post 1899999999999999999 is gone (deleted)"
+   ],
+   "notes": [],
+   "checks": [
+    {
+     "type": "quoted_post",
+     "id": "1899999999999999999",
+     "state": "dead",
+     "x_status": "not_found"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000174218",
+   "url": "https://x.com/demo_gpu_gus/status/1900000000000174218",
+   "category": "Install/Try",
+   "age_days": 200.5,
+   "half_life_days": 90,
+   "decay": 0.214,
+   "status": "broken",
+   "issues": [
+    "repo archived: tensorflow/swift"
+   ],
+   "notes": [],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://github.com/tensorflow/swift",
+     "final_url": null,
+     "http": 200,
+     "state": "alive"
+    },
+    {
+     "type": "github",
+     "archived": true,
+     "days_since_push": 1740,
+     "description": "Swift for TensorFlow",
+     "pushed_at": "2022-01-12T19:55:30Z",
+     "renamed_from": null,
+     "repo": "tensorflow/swift",
+     "stars": 6116,
+     "state": "archived"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000182137",
+   "url": "https://x.com/demo_coach_kim/status/1900000000000182137",
+   "category": "Learn",
+   "age_days": 230.6,
+   "half_life_days": 365,
+   "decay": 0.645,
+   "status": "fresh",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000190056",
+   "url": "https://x.com/demo_news_ned/status/1900000000000190056",
+   "category": "Archive",
+   "age_days": 260.6,
+   "half_life_days": 14,
+   "decay": 0.0,
+   "status": "stale",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000197975",
+   "url": "https://x.com/demo_papers_pat/status/1900000000000197975",
+   "category": "Install/Try",
+   "age_days": 300.4,
+   "half_life_days": 90,
+   "decay": 0.099,
+   "status": "stale",
+   "issues": [],
+   "notes": [],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://github.com/karpathy/nanoGPT",
+     "final_url": null,
+     "http": 200,
+     "state": "alive"
+    },
+    {
+     "type": "github",
+     "archived": false,
+     "days_since_push": 340,
+     "description": "The simplest, fastest repository for training/finetuning medium-sized GPTs.",
+     "pushed_at": "2025-11-12T19:52:34Z",
+     "renamed_from": null,
+     "repo": "karpathy/nanoGPT",
+     "stars": 63899,
+     "state": "alive"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000205894",
+   "url": "https://x.com/demo_recsys_raj/status/1900000000000205894",
+   "category": "Archive",
+   "age_days": 340.4,
+   "half_life_days": 60,
+   "decay": 0.02,
+   "status": "broken",
+   "issues": [
+    "dead link: https://example.com/this-page-was-deleted"
+   ],
+   "notes": [],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://example.com/this-page-was-deleted",
+     "final_url": null,
+     "http": 404,
+     "state": "dead"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000213813",
+   "url": "https://x.com/demo_founder_fox/status/1900000000000213813",
+   "category": "Follow up",
+   "age_days": 380.0,
+   "half_life_days": 30,
+   "decay": 0.0,
+   "status": "stale",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000221732",
+   "url": "https://x.com/demo_coach_kim/status/1900000000000221732",
+   "category": "Archive",
+   "age_days": 420.8,
+   "half_life_days": 14,
+   "decay": 0.0,
+   "status": "stale",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000229651",
+   "url": "https://x.com/demo_infra_nina/status/1900000000000229651",
+   "category": "Learn",
+   "age_days": 470.2,
+   "half_life_days": 365,
+   "decay": 0.409,
+   "status": "aging",
+   "issues": [],
+   "notes": [],
+   "checks": [
+    {
+     "type": "link",
+     "url": "https://huggingface.co/BAAI/bge-small-en-v1.5",
+     "final_url": null,
+     "http": 200,
+     "state": "alive"
+    }
+   ]
+  },
+  {
+   "id": "1900000000000237570",
+   "url": "https://x.com/demo_news_ned/status/1900000000000237570",
+   "category": "Archive",
+   "age_days": 520.5,
+   "half_life_days": 14,
+   "decay": 0.0,
+   "status": "stale",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  },
+  {
+   "id": "1900000000000245489",
+   "url": "https://x.com/demo_papers_pat/status/1900000000000245489",
+   "category": "Read",
+   "age_days": 560.2,
+   "half_life_days": 60,
+   "decay": 0.002,
+   "status": "stale",
+   "issues": [],
+   "notes": [],
+   "checks": []
+  }
+ ]
+}
