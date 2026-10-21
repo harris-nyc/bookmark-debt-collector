@@ -1,7 +1,7 @@
 ---
 name: bookmark-triage
 description: >
-  Pull my X bookmarks (credit-aware), sort every one into Install/Try, Read, Learn,
+  Pull my X bookmarks (only what's new), sort every one into Install/Try, Read, Learn,
   Follow up or Archive with one concrete next action, and write my action list.
   Use when I say "triage my bookmarks", "bookmark debt", "first pass", or run /bookmark-triage.
 metadata:
@@ -17,7 +17,7 @@ one next action I could finish in under 30 minutes.
 ## Required access
 - The official **X plugin** (connector), signed in as me. Read-only use only.
 - This repo on the bot's computer at `~/bookmark-debt-collector`
-  (install: step 3 of `BOT.md`). Run every command from that folder.
+  (install: step 2 of `BOT.md`). Run every command from that folder.
   If the repo or Python is unavailable, do the triage yourself following the rules below and say so.
 
 ## Hard rules (never break)
@@ -28,7 +28,7 @@ one next action I could finish in under 30 minutes.
 
 ## Steps
 1. **Who am I.** Call the X connector `get_users_me`. Keep `id` and `username`.
-2. **Pull, credit-aware** (X API reads cost credits per returned post):
+2. **Pull, only what's new** (reads go through your X plugin, read-only):
    - Read `private/state.json` if it exists. Its `known_ids` are bookmarks we already have.
    - **First run** (no state): `get_users_bookmarks` with `max_results=100`, follow `meta.next_token` until it is absent.
    - **Later runs**: first call `max_results=10`. If any returned id is already in `known_ids`, stop: there's nothing
@@ -38,8 +38,8 @@ one next action I could finish in under 30 minutes.
      `post.fields=created_at,author_id,public_metrics,entities,lang,conversation_id,note_tweet,referenced_tweets,context_annotations`,
      `user.fields=username,name,public_metrics,verified,description`, `media.fields=type,url,preview_image_url`.
    - Save each raw response to a file (the tool's write-to-file option, or the JSON exactly as returned), then merge it:
-     `.venv/bin/bdc ingest <saved file>`. It prints `NEXT:` (next pagination_token, or stop) and the cost so far.
-   - Report how many posts were returned vs. new, and the estimated cost (returned × $0.001 at Owned-Read pricing).
+     `.venv/bin/bdc ingest <saved file>`. It prints `NEXT:` (next pagination_token, or stop).
+   - Report how many posts were returned vs. new.
 3. **Rules pass.** Run
    `.venv/bin/bdc run --input private/archive.json --out private/out --me <username> --state private/state.json --overrides private/triage_overrides.json --theme-names private/theme_names.json`
    (the overrides/names files may not exist yet; that's fine).

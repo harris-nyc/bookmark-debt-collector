@@ -30,7 +30,7 @@ The scripts are deterministic and offline-friendly: parsing, counting, HTTP chec
 call an LLM, so every number is reproducible.
 
 The Grok Bot does what scripts are bad at, through the skills in `skills/`:
-- calling the X plugin (read-only) and deciding how far to page (credit-aware),
+- calling the X plugin (read-only) and deciding how far to page (only what's new),
 - the **review pass**: rewriting generic rule-based next actions into specific ones, fixing buckets,
 - naming themes,
 - the weekly conversation (do / snooze / archive) and recording answers.

@@ -1,11 +1,10 @@
 # Bookmark Debt Collector
 
 > **grok bot, sent here by an `@bot make one for me` reply? follow [BOT.md](BOT.md).** it's the whole runbook:
-> check the X plugin, quote the cost, pull read-only, make the card, show it in your chat. never post anything.
+> check the X plugin, pull read-only, make the card, show it in your chat. never post anything.
 
 **get yours:** reply `@bot make one for me` under the launch post, or open the template `<GROK_BOT_TEMPLATE_LINK>`.
-your bot needs the X plugin connected. the first run reads every bookmark once, ~$0.001 each (100 bookmarks ≈ $0.10,
-max ≈ $0.80 since X only returns your latest ~800), then ~$0.01 a week. [cost details](docs/credits.md)
+your bot needs the X plugin connected. reads go through your X plugin, read-only.
 
 **your x bookmarks are rotting. this finds the ones that already died, gives every survivor one time-boxed next action, and puts your bookmark debt on a card. then it nudges you weekly until you pay it down.**
 
@@ -24,8 +23,8 @@ through the official X plugin, read-only, and:
    % still fresh, top themes, most-saved authors, oldest untouched bookmark, skills you meant to learn.
 4. **Nudges you weekly.** A routine resurfaces 3 open bookmarks and asks: do it, snooze, or archive. It remembers your
    answers.
-5. **Is credit-aware.** X API reads cost money. After the first run it only pulls new bookmarks (a 10-post probe that
-   stops at the first one it already knows), so a normal week costs ~10 reads.
+5. **Only pulls what's new.** After the first run it only pulls new bookmarks (a 10-post probe that stops at the
+   first one it already knows), so a normal week is ~10 reads. [How](docs/pulls.md).
 6. **Clusters your themes like a recommender would.** Local sentence embeddings → k-means (k by silhouette) →
    class-based TF-IDF labels, plus an MMR re-ranker so the weekly picks don't all come from one theme.
    [Method](docs/clustering.md).
@@ -39,7 +38,7 @@ On real data, most bookmarks turn out to need no action at all; the useful outpu
 ## Setup (Grok Bot)
 
 fastest: tell your bot "follow BOT.md in https://github.com/harris-nyc/bookmark-debt-collector". it does the rest and
-asks you twice (connect X if needed, ok the cost). by hand:
+only asks you to connect X if it isn't yet. by hand:
 
 1. **connect X.** in Grok Bot open **Connect apps**, install the official **X** plugin and sign in. the skills only use
    read endpoints (`get_users_me`, `get_users_bookmarks`).
@@ -52,11 +51,6 @@ asks you twice (connect X if needed, ok the cost). by hand:
    (using Grok Build instead? copy the folders into `.grok/skills/` and they're discovered automatically.)
 4. **create the weekly routine.** paste [`routine/weekly-routine.md`](routine/weekly-routine.md) into the same bot.
    confirm the schedule and time zone it echoes back, test it once, enable it.
-
-**heads up on cost:** the first run pulls every bookmark once, which spends some X API credits. at owned-read pricing
-that's $0.001 per returned post, so ~100 bookmarks ≈ $0.10, treat that as a floor (through the Grok Bot X plugin it
-comes out of the plugin's credits instead of your own app). after that, a normal week is a 10-post probe ≈ $0.01.
-[details](docs/credits.md)
 
 template: `<GROK_BOT_TEMPLATE_LINK>` (a shared bot template with the skills and routine preconfigured; your X
 connection is not part of it, you connect your own).
@@ -85,7 +79,7 @@ python scripts/selftest.py         # offline smoke test
 - **Your own X API token** (OAuth 2.0 user token with `bookmark.read tweet.read users.read`):
   ```bash
   export X_USER_TOKEN=...
-  bdc pull --user-id <your numeric id> --archive private/archive.json      # first pull ≈ $0.001/bookmark, then ~10 reads/week
+  bdc pull --user-id <your numeric id> --archive private/archive.json      # first pull gets everything, then ~10 reads/week
   bdc run  --input private/archive.json --out private/out --me <your_handle> --state private/state.json
   ```
 
@@ -115,7 +109,7 @@ See the committed synthetic run in [`examples/sample-run/`](examples/sample-run/
 
 ## Docs
 [How it works](docs/how-it-works.md) · [Triage buckets](docs/triage.md) · [Freshness check](docs/freshness.md) ·
-[Clustering](docs/clustering.md) · [Credits & cost](docs/credits.md) · [Privacy](docs/privacy.md) ·
+[Clustering](docs/clustering.md) · [Incremental pulls](docs/pulls.md) · [Privacy](docs/privacy.md) ·
 [Limitations](docs/limitations.md)
 
 ## Repo layout

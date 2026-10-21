@@ -6,7 +6,7 @@
   (`[{"url", "text", "author", "created_at"}]`) and pass it with `--input`.
 - **No bookmark timestamps.** X doesn't say *when* you bookmarked something. Ages, the date range and "oldest untouched"
   use the post's creation date. The API order (most recently bookmarked first) is kept as `rank`.
-- **Un-bookmarks aren't seen by incremental pulls** (see [credits.md](credits.md)).
+- **Un-bookmarks aren't seen by incremental pulls** (see [pulls.md](pulls.md)).
 - **Media is not analysed.** Posts that are only a video or image ("this 🤯") have little text, so triage and themes
   rely on the quoted post and X's topic annotations. Most of these end up in Archive.
 - **x.com links can't be verified** without a login: X Articles and profiles are reported as unverifiable.

@@ -11,7 +11,7 @@ Every Sunday at 9:00 AM America/New_York, run the weekly-resurface skill.
   ~/bookmark-debt-collector/private/.
 - Pull only new bookmarks: probe with max_results=10 and stop at the first bookmark we already have.
 - Post the 3 resurfaced bookmarks in this conversation with their next actions and ask me: do it, snooze, or archive.
-  Include how many new bookmarks came in and what the pull cost.
+  Include how many new bookmarks came in.
 - Record my answers with `.venv/bin/bdc decide`.
 - On the first Sunday of each month, also regenerate my Bookmark Wrapped card (bookmark-wrapped skill) and attach it.
 - Never post, like, follow, bookmark, unbookmark or DM on X. Never send anything outside this conversation without asking.

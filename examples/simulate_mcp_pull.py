@@ -1,7 +1,7 @@
 """Pretend to be the X plugin: split the synthetic sample into get_users_bookmarks
 pages and save each one the way a Grok Bot tool result lands on disk (a wrapper
 line, the JSON, then a rate-limit note). Lets you test `bdc ingest` and the whole
-BOT.md flow without X credentials or credits.
+BOT.md flow without X.
 
   python examples/simulate_mcp_pull.py private/pulls --page-size 12
   -> private/pulls/page-1.txt, page-2.txt, ...   (follow meta.next_token like the real thing)

@@ -2,7 +2,7 @@
 
   bdc run      --input bookmarks.json --out out/ [--me handle]   full pipeline
   bdc ingest   page-1.txt [page-2.txt ...]                       merge saved X plugin pages (Grok Bot path)
-  bdc pull     --user-id ID --archive archive.json               pull via X API (X_USER_TOKEN), credit-aware
+  bdc pull     --user-id ID --archive archive.json               pull via X API (X_USER_TOKEN), only what's new
   bdc resurface --out out/ --state state.json                    pick this week's 3
   bdc decide   --state state.json 2 snooze                       record do/snooze/archive
 """
@@ -159,7 +159,6 @@ def cmd_ingest(a):
     next_token = (pages[-1].get("meta") or {}).get("next_token")
     log(f"ingested {len(pages)} page(s): {returned} returned, {n_new} new, {returned - n_new} already known")
     log(f"archive: {total} bookmarks in {arch}")
-    log(f"cost of these pages: {returned} reads ≈ ${returned * fetch.COST_PER_READ:.3f}")
     if hit_known:
         log("NEXT: stop paging, you've reached bookmarks you already have")
     elif next_token:
@@ -182,9 +181,9 @@ def cmd_pull(a):
     arch = Path(a.archive)
     old = json.loads(arch.read_text()) if arch.exists() else []
     known = {p["id"] for pg in (old if isinstance(old, list) else [old]) for p in pg.get("data", [])}
-    pages, cost = fetch.pull(a.user_id, token, known, probe=a.probe)
+    pages, stats = fetch.pull(a.user_id, token, known, probe=a.probe)
     _, n_new = fetch.merge_archive(arch, pages)
-    log(f"pulled {cost['returned']} posts ({n_new} new) · est. cost ${cost['est_cost_usd']}")
+    log(f"pulled {stats['returned']} posts ({n_new} new)")
     return 0
 
 

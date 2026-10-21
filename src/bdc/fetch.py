@@ -1,11 +1,10 @@
-"""Credit-aware bookmark pulls.
+"""Incremental bookmark pulls.
 
-X API reads cost credits per returned post, and the bookmarks endpoint has no
-since_id. So after the first run we:
+The bookmarks endpoint has no since_id. So after the first run we:
   1. ask for a small probe page (default 10)
   2. stop as soon as a page contains a bookmark we already have
   3. only page further (100 at a time) while every item is new
-A weekly run with 0-5 new bookmarks therefore costs ~10 post reads, not 100+.
+A weekly run with 0-5 new bookmarks therefore reads ~10 posts, not 100+.
 """
 from __future__ import annotations
 
@@ -21,7 +20,6 @@ FIELDS = {
     "user.fields": "username,name,public_metrics,verified,description",
     "media.fields": "type,url,preview_image_url",
 }
-COST_PER_READ = 0.001  # USD, X API "Owned Reads" for your own bookmarks (Oct 2026); expansions may bill extra
 
 
 def pull(user_id: str, token: str, known_ids: set[str], probe: int = 10, max_pages: int = 10) -> tuple[list[dict], dict]:
@@ -44,7 +42,7 @@ def pull(user_id: str, token: str, known_ids: set[str], probe: int = 10, max_pag
         if len(fresh) < len(ids) or not tok:
             break
         params = {**FIELDS, "max_results": 100, "pagination_token": tok}
-    return pages, {"returned": returned, "new": new, "est_cost_usd": round(returned * COST_PER_READ, 4)}
+    return pages, {"returned": returned, "new": new}
 
 
 def merge_archive(archive_path: Path, new_pages: list[dict]) -> tuple[list[dict], int]:

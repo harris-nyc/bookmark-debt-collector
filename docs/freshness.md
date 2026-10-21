@@ -38,7 +38,7 @@ Not verifiable, never called dead:
 
 Age is measured from the **post's** creation date because X does not expose when you bookmarked it.
 
-## Cost and caching
+## Caching
 All results are cached in `out/.cache.json` (or `--cache`). Re-runs only check new URLs. Delete the cache to re-check
 everything. Unauthenticated GitHub allows 60 requests per hour; set `GITHUB_TOKEN` if you have many repos.
 `--offline` skips the network and uses the HTTP status X recorded when it unfurled each link.

@@ -18,8 +18,7 @@ metadata:
    `private/triage_overrides.json`.
 3. Run `.venv/bin/bdc run --input private/archive.json --out private/out --me <username> --state private/state.json --overrides private/triage_overrides.json --theme-names private/theme_names.json`.
    It refreshes freshness (cached) and writes `private/out/resurface.md` with this week's 3 picks.
-4. Send me the contents of `resurface.md` in this conversation. Keep it short. Mention how many new bookmarks came in and
-   the cost of the pull.
+4. Send me the contents of `resurface.md` in this conversation. Keep it short. Mention how many new bookmarks came in.
 5. When I answer (`do 1`, `snooze 2`, `archive 3`, or in words), record it:
    `.venv/bin/bdc decide --state private/state.json <n> <do|snooze|archive> [--days 14]`.
    - `do`: mark done. If the action is something you can do *inside the bot's own sandbox* (read a paper and summarise
