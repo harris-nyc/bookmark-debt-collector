@@ -3,7 +3,7 @@
 > **grok bot, sent here by an `@bot make one for me` reply? follow [BOT.md](BOT.md).** it's the whole runbook:
 > check the X plugin, pull read-only, make the card, show it in your chat. never post anything.
 
-**get yours:** reply `@bot make one for me` under the launch post, or open the template `<GROK_BOT_TEMPLATE_LINK>`.
+**get yours:** reply `@bot make one for me` under the launch post, or open the template [x.ai/bot/kh0FE5498wURU-QxPfLfW](https://x.ai/bot/kh0FE5498wURU-QxPfLfW).
 your bot needs the X plugin connected. reads go through your X plugin, read-only.
 
 **your x bookmarks are rotting. this finds the ones that already died, gives every survivor one time-boxed next action, and puts your bookmark debt on a card. then it nudges you weekly until you pay it down.**
@@ -52,7 +52,7 @@ only asks you to connect X if it isn't yet. by hand:
 4. **create the weekly routine.** paste [`routine/weekly-routine.md`](routine/weekly-routine.md) into the same bot.
    confirm the schedule and time zone it echoes back, test it once, enable it.
 
-template: `<GROK_BOT_TEMPLATE_LINK>` (a shared bot template with the skills and routine preconfigured; your X
+template: [x.ai/bot/kh0FE5498wURU-QxPfLfW](https://x.ai/bot/kh0FE5498wURU-QxPfLfW) (a shared bot template with the skills and routine preconfigured; your X
 connection is not part of it, you connect your own).
 
 ## Run locally without Grok Bot
